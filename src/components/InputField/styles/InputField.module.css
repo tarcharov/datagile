@@ -1,0 +1,35 @@
+.main{
+    width: 100%;
+    display: flex;
+
+    align-items: center;
+}
+.inputName{
+    white-space: nowrap;
+}
+.todoInput{
+    width: 100%;
+    height: 30px;
+    border: 2px solid #dee3e1;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+.todoAddBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    color: #ffffff;
+    background-color: #3e6ec2;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 20px;
+    border-radius: 5px;
+    border-color: #3e6ec2;
+    cursor: pointer;
+}
+
+.todoAddBtnPlus{
+    font-size: 30px;
+    margin-right: 5px;
+}
