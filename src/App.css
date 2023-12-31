@@ -6,3 +6,23 @@
   align-items: center;
   margin: 30px;
 }
+
+.todoWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #dee3e1;
+  border-radius: 5px;
+}
+

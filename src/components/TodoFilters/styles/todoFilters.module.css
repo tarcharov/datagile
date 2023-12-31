@@ -1,0 +1,7 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-left: 1px solid #dee3e1;
+    padding: 10px;
+}

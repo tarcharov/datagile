@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "./styles/InputField.module.css"
+import styled from "./styles/inputField.module.css"
 const InputField = () => {
     return (
         <div className={styled.main}>
