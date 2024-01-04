@@ -1,18 +1,13 @@
 import React from "react";
 import styled from "./styles/todoList.module.css";
+import {useAppSelector} from "../../hook";
+import TodoItem from "./components/TodoItem/TodoItem"
 const TodoList = () => {
-  const todos = [
-    { id: 1, text: "Погулять с собакой" },
-    { id: 2, text: "Прочитать книгу" },
-  ];
-
+  const todos = useAppSelector(state => state.todos.todos)
   return (
     <div className={styled.main}>
       {todos.map((todo) => (
-        <div key={todo.id}>
-          <input type="checkbox" />
-          <label>{todo.text}</label>
-        </div>
+          <TodoItem key={todo.id} {...todo}/>
       ))}
     </div>
   );

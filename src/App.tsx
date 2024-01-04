@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
       <InputField />
-
       <div className="todoWrapper">
         <div className="headerWrapper">
           <h3>Список Задач</h3>

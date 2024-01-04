@@ -1,4 +1,9 @@
 .main{
     display: flex;
     flex-direction: row;
+
+}
+
+.label{
+    margin-right: 15px;
 }

@@ -1,16 +1,18 @@
 import React from "react";
-import FiltersRadioButton from "../RadioButton/FiltersRadioButton";
-import SortSelect from "../SortSelect/SortSelect";
+import FiltersRadioButton from "./components/RadioButton/FiltersRadioButton";
+import SortSelect from "./components/SortSelect/SortSelect";
 import styled from "./styles/todoFilters.module.css";
-const filters = ["Все", "Активные", "Завершенные"];
+const radioFilters = ["Все", "Активные", "Завершенные"];
 const sortFilters = ["Наименование", "Статус"];
 const TodoFilters = () => {
   return (
     <div className={styled.main}>
-      <span>Статус</span>
-      {filters.map((val) => (
-        <FiltersRadioButton value={val} />
-      ))}
+        <div className={styled.radioButtonsWrapper}>
+            <span className={styled.span}>Статус</span>
+            {radioFilters.map((val) => (
+                <FiltersRadioButton value={val} />
+            ))}
+        </div>
       <SortSelect sortFilters={sortFilters} />
     </div>
   );

@@ -1,11 +1,12 @@
-import React from "react";
+import React, {FC} from "react";
+import styled from "./styles/sortSelect.module.css"
 interface SortSelectProps {
   sortFilters: string[];
 }
-const SortSelect = ({ sortFilters }: SortSelectProps) => {
+const SortSelect:FC<SortSelectProps> = ({ sortFilters }) => {
   return (
-    <form>
-      <label htmlFor="sort">Сортировка</label>
+    <div className={styled.main}>
+      <label className={styled.label} htmlFor="sort">Сортировка</label>
       <select id="sort" name="sort">
         {sortFilters.map((val) => (
           <option key={val} value={val}>
@@ -13,7 +14,7 @@ const SortSelect = ({ sortFilters }: SortSelectProps) => {
           </option>
         ))}
       </select>
-    </form>
+    </div>
   );
 };
 

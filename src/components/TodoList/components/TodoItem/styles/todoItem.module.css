@@ -1,0 +1,22 @@
+.main{
+    width: 100%;
+    height: 36px;
+    align-items: center;
+    display: flex;
+
+}
+.deleteIcon{
+    width: 30px;
+    height: 30px;
+    box-shadow: 2px 2px 2px #bfbebb;
+    border-radius: 3px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+.checkBox:checked+label{
+    text-decoration: line-through;
+}
