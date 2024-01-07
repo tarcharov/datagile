@@ -3,6 +3,7 @@
     height: 36px;
     align-items: center;
     display: flex;
+    position: relative;
 
 }
 .deleteIcon{
@@ -15,8 +16,8 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
 }
+
 .checkBox:checked+label{
     text-decoration: line-through;
 }

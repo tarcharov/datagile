@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import styled from "./styles/sortSelect.module.css";
-import {setSortFilter} from "../../../../store/todoSlice";
-import {useAppDispatch} from "../../../../hook";
+import { setSortFilter } from "../../../../store/todoSlice";
+import { useAppDispatch } from "../../../../hook";
 
 const sortFilters = ["Наименование", "Статус"];
 
@@ -20,6 +20,7 @@ const SortSelect: FC = () => {
       <select
         id="sort"
         name="sort"
+        className={styled.select}
         onChange={(e) => handleRadioChange(e.target.value)}
       >
         {sortFilters.map((text) => (
