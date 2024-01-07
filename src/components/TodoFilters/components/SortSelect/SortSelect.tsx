@@ -1,12 +1,16 @@
 import React, { FC, useState } from "react";
 import styled from "./styles/sortSelect.module.css";
+import {setSortFilter} from "../../../../store/todoSlice";
+import {useAppDispatch} from "../../../../hook";
 
 const sortFilters = ["Наименование", "Статус"];
 
 const SortSelect: FC = () => {
   const [value, setValue] = useState("Наименование");
+  const dispatch = useAppDispatch();
   const handleRadioChange = (value: string) => {
     setValue(value);
+    dispatch(setSortFilter(value));
   };
   return (
     <div className={styled.main}>

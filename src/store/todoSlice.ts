@@ -1,21 +1,16 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-interface Todo {
-  id: number;
-  text: string;
-  completed: boolean;
-}
-
-interface TodoState {
-  todos: Todo[];
-}
+import {Todo, TodoState} from "../components/types";
 
 const initialState: TodoState = {
   todos: [
-    { id: 0, text: "string", completed: false },
-    { id: 1, text: "sndfsfg", completed: false },
-    { id: 2, text: "dgsfgdf", completed: true },
-    { id: 3, text: "234234", completed: false },
+    { id: 0, text: "Изучить Rtk", completed: true },
+    { id: 1, text: "Сделать TodoList", completed: true },
+    { id: 2, text: "Залить на GitHub", completed: true },
+    { id: 3, text: "Отправить на проверку", completed: true },
+    { id: 4, text: "Работать", completed: false },
   ],
+  filterVisibility:"Все",
+  filterSort:"Наименование",
 };
 
 const todoSlice = createSlice({
@@ -39,8 +34,15 @@ const todoSlice = createSlice({
         todo.completed = !todo.completed;
       }
     },
+    setVisibilityFilter:(state,action:PayloadAction<string>) => {
+      state.filterVisibility = action.payload;
+    },
+    setSortFilter:(state,action:PayloadAction<string>) => {
+      state.filterSort = action.payload;
+    },
   },
 });
 
-export const { addTodo, deleteTodo, toggleTodo } = todoSlice.actions;
+export const { addTodo,deleteTodo,toggleTodo,setSortFilter, setVisibilityFilter} = todoSlice.actions;
+
 export default todoSlice.reducer;
