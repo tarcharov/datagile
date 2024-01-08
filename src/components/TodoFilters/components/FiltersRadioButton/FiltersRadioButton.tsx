@@ -14,6 +14,7 @@ const FiltersRadioButton: FC<FiltersRadioButtonProps> = ({
   return (
     <div className={styled.main}>
       <input
+        className={styled.radio}
         type="radio"
         value={value}
         id={value}
@@ -21,7 +22,7 @@ const FiltersRadioButton: FC<FiltersRadioButtonProps> = ({
         checked={checked}
         onChange={(e) => handleRadioChange(e.target.value)}
       />
-      <label htmlFor={value}>{value}</label>
+      <label className={styled.label} htmlFor={value}>{value}</label>
     </div>
   );
 };

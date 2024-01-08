@@ -1,4 +1,52 @@
 .main{
     display: flex;
     flex-direction: row;
+    position: relative;
+    margin-left: 10px;
+}
+
+.radio{
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.label {
+    padding-left: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+}
+.label:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2245f2;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: background .1s linear, border .1s linear;
+}
+
+.label:after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #2245f2;
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    z-index: 2;
+    border-radius: 50%;
+    transition: opacity .1s linear;
+}
+
+.radio:checked + .label:after {
+    opacity: 1;
 }

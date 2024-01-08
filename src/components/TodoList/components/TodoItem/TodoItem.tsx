@@ -18,8 +18,9 @@ const TodoItem: FC<TodoItemProps> = ({ id, text, completed }) => {
         type="checkbox"
         checked={completed}
         onChange={() => dispatch(toggleTodo(id))}
+        id={`checkbox ${id}`}
       />
-      <label className={styled.label}>{text}</label>
+      <label htmlFor={`checkbox ${id}`} className={styled.label}>{text}</label>
       <div className={styled.deleteIcon}>
         <DeleteIcon
           width="20"

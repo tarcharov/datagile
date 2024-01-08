@@ -6,6 +6,7 @@
     position: relative;
 
 }
+
 .deleteIcon{
     width: 30px;
     height: 30px;
@@ -18,6 +19,63 @@
     cursor: pointer;
 }
 
-.checkBox:checked+label{
+.checkBox{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.checkBox {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.label {
+    padding-left: 25px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.label:before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: background .1s linear, border .1s linear;
+}
+
+.label:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-top: 10px;
+    background: url("../../../../../assets/icons/check.svg") no-repeat;
+    background-size: 10px 10px;
+    opacity: 0;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    z-index: 2;
+    transition: opacity .1s linear;
+}
+
+.checkBox:checked + .label:before {
+    background-color: #2245f2;
+}
+
+.checkBox:checked + .label:after {
+    opacity: 1;
+}
+
+.checkBox:checked+.label{
     text-decoration: line-through;
 }

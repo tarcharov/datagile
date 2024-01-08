@@ -5,6 +5,7 @@
     border-left: 1px solid #dee3e1;
     padding: 10px 15px;
 }
+
 .radioButtonsWrapper{
     display: flex;
     align-items: center;
@@ -12,5 +13,6 @@
 }
 
 .span{
+    color: #aaaaaa;
     margin-right: 50px;
 }
